@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>obj1</title>
+</head>
+
+<body>
+    <script>
+        // let fruit = prompt("enter your fruit name", 'Apple')
+
+        // let bag = {
+        //     [fruit]: 5,
+        // }
+        // document.write(bag[fruit])
+
+
+
+        //property value shorthand
+        /*
+                function MakeUser(name, age) {
+                    return {
+                        name: name,
+                        age: age,
+                    }
+        
+                }
+                        let user = MakeUser('sarvesh',  20)
+                        console.log(user.name);//print arega saresh ko
+        */
+
+        /*
+        
+                function makeuser(name,age) {
+                        return{
+                            name,
+                            age,
+                        };
+                       
+                }
+                let user = makeuser('sarvesh',  20)
+                        console.log(user);//print arega saresh ko
+                        */
+
+
+        /*
+                        let user = {};
+                        console.log(user.noSuchProperty === undefined)
+        */
+        /*
+                        let user={ name:'sarvesh', age:20}
+                             console.log('name' in user);
+        
+                             */
+
+
+
+        /*
+        let user={
+             name:'sarvesh', 
+             age:20,
+           isAdmin:true
+       };
+      for (let key in user){
+          console.log(key);
+          console.log(user[key]);
+      }
+      */
+        /*
+        let user = {
+            name:'sarvesh',
+            age: 30,
+            surname:'smith',
+            
+        }*/
+
+
+
+        //Object refrence topic  and copying
+
+        //   let message ='hello';
+        //   let mes = message;
+        //   console.log(mes)
+
+
+        /*
+                        let user = {name:'john'}
+                        admin = user;
+                        console.log(admin)
+        
+          */
+        /*
+                       let user = {name:'john'}
+                       admin = user;
+                       admin.name ='pete'
+                       console.log(user.name)
+          */
+        /*
+                      let a = {};
+                      let b = a;
+      
+                      console.log(a ==b);
+                      console.log(a ===b);
+                      */
+
+        /*  
+          let a = {};
+          let b = {};
+          console.log(a ==b);
+          */
+        /*
+                        let user = {
+                            name:'sarvesh',
+                            age:20,
+                        };
+                    let clone ={};
+                    for (let key in user){
+                        
+                    clone[key] = user[key];
+                    clone.name = 'john'
+                    }
+                     console.log(user.name)
+                     console.log(clone .name)
+        */
+        /*
+                            let user ={ name:'sarvesh'};
+        
+                            let user1 ={canview:true,
+                            name:'pete'};
+                            let user2 = {cansee:true};
+        
+                            Object.assign(user, user1, user2);
+                            console.log(user)
+        
+                            //agar koi property pahle hi assign hai toh wo overwrite ho jayegi
+          */
+
+
+        /*
+                                  //poora ka poora object hi clone karna
+                                  let user = {
+                                      name:'sarvesh',
+                                      age:20,
+                                  };
+                                  let clone = Object.assign({},user);
+                                  console.log(clone)
+      */
+        /*
+            let user = {
+                name: 'sarvesh',
+                age: 20,
+                    size:{
+                        height:160,
+                        weight:56,
+
+                    }
+ 
+                     };
+
+                            console.log(user);
+
+                            console.log(user.size.weight);
+*/
+/*
+
+
+        let user = {
+            name: 'sarvesh',
+            age: 20,
+            size: {
+                height: 160,
+                weight: 56,
+
+            }
+
+        };
+
+        let clone = Object.assign({}, user);
+            console.log(clone)
+            console.log(user.size === clone.size);
+
+            user.size.weight++;
+            console.log(clone.size.weight);
+
+*/
+/*
+            //this is have global scope and it have accessed by outside
+            this.table ='window table'
+            console.log(window.table)
+
+            this.garage ={
+               table :'garage table' 
+            }
+console.log(this.garage.table);
+console.log(this.window.garage.table );
+*/          
+                //ab hum ek prvate object banayenge thiis inside a object
+                let sarveshRoom ={
+                    table:'sarvesh table',
+                }
+                // console.log(this.sarveshRoom.table) ye error dega kyuki ye property read nhi kar sakta private oj ki this inside object ki
+                console.log(sarveshRoom.table);
+
+    </script>
+</body>
+
+</html>

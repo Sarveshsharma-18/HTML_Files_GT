@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers in data types</title>
+
+</head>
+<body>
+    <h1>
+        Numbers in data types
+
+    </h1>
+    <pre>Regular                        Bigint
+        .ye 64-bit contain              ye arbitary length contain karte hai
+        karte hai using IEEE-754                          .ye 2^53 se -2^53 se jyada dikh ne me use hote hai
+
+    </pre>
+    <script>
+        
+        //Numbers 2 method to write normal an \d with undewrscoe
+
+        let num1 = 1000000000;
+        let num2 = 1_000_000_000;
+        console.log(num1 === num2)//true matlab shi hai
+
+        //we use e and then number of zero we want
+        let num3 = 1_000_000_000;
+        let num4 = 1e9;
+        console.log(num3 === num4)//true 
+        let num5 = 7.3e9;
+        console.log(num5);//730000000000
+
+        //e multiplies the number by 1 with the given zeroes count
+        console.log(1e3 === 1* 1000);//true
+        console.log(1.23e6 === 1.23 * 1000000)//true
+
+        //now lets write 1 microsecond(one milionth of a second)
+
+        let mcs1 =1e-6;
+        let mcs2 =0.000001;
+        console.log(mcs1 === mcs2);//true
+
+
+        //a negative number after e means a division by 1 with given number of zeroes
+        console.log( 1e-3 === 1/ 1000);// true 0.001 means -3 divides by 1 with 3 zeroes
+
+        //-6 divides by 1 with 6 zeroes
+       console.log( 1.23e-6 === 1.23 / 1000000); // true0.00000123
+
+       //hexadecimal binary and octal numbers
+
+       //hex numbers are used mostly in js 
+       //short way to write 0x
+
+       console.log(0xff);//255
+       console.log(0xFF);//255 case dos't matter
+
+       //binary and octal are raerly used but supporyed using 0b and  0o
+       let a = 0b11111111//binary form of 255
+       let b = 0o377//octal form of 255
+       console.log(a === b);//true same number both sides
+
+
+       //to string(base) returns a string of num in the numeral system with the given base
+
+       let num = 255;
+       console.log(num.toString(16));//ff
+       console.log(num.toString(2));//11111111
+       //the base can vary 2 to 36 by default is 10
+
+       console.log(123456..toString(36));//2n9c
+
+
+       //Rounding
+            //Math.floor
+       console.log( Math.floor(3.1));//3
+       console.log( Math.floor(-1.1));//-2
+
+
+       //Math.ceil
+       console.log(Math.ceil(3.3));//4
+       console.log(Math.ceil(-3.3));//-3
+
+       //Math.turnc
+       console.log(Math.trunc(3.1));//3
+       console.log(Math.trunc(-3.1));//-3
+
+       //Math.round
+       console.log(Math.round(23.356));//23
+       console.log(Math.round(-23.356));//-23
+       
+
+
+
+
+    </script>
+</body>
+</html>

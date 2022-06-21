@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another way to create an array</title>
+</head>
+<body>
+    <h1>Another way to create an array </h1>
+    <script>
+        /*
+        //method 2nd to create array
+        let a = new Array("name",'sarvesh','age',20,Boolean,undefined,null)
+        console.log(a)
+        for(let i = 0; i<=6; i++){
+            console.log(a[i])
+        }
+
+        //bahar se value store karna
+        a[0] = "sharma";
+        a[9] = "number9";
+        a[8] = "number8";
+
+        //reserve space for future element
+        let b = new Array(3)//ab ise pta hai ki future me 3 value hi store hogi
+        b[0] = 'sarmavesh';
+
+        console.log(b[0 ]);
+        console.log(b[1 ]);
+        console.log(b[2 ]);
+        console.log(b[3 ]);
+*/
+        // user se value le kar print karna loop me
+           let c = new Array (3);
+           for(let g =0; g<3; g++){
+            c[g] = prompt("Enter the user value:")
+           }
+           document.write("<ul>");
+            for (let a = 0; a<3; a++){
+                document.write('<li>' + c[a] + "</li>");
+            
+            }
+          document.write('</ul>');
+
+
+//not working
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

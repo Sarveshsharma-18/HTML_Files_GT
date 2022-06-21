@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nulish coalesing</title>
+</head>
+
+<body>
+    <h1>Nulish coalscing</h1>
+
+    <script>
+        /*
+        let obj = {
+
+            score :100,
+        }
+        let msg = `Your score is ${obj.score}`;
+        
+        console.log(msg)
+*/
+        /*
+                //agar uper score nhi mila to ye 10 prit karega uski jgh  ||logical or operator 
+                
+        
+                let obj = {
+        
+        
+                }
+                let msg = `Your score is ${obj.score || 10}`;
+                console.log(msg)
+        */
+
+/*
+
+        let obj = {
+            score: 0,//0 HAI ATB bhi output me 10 ayega   jo shi nhi hai ab mujhe nulish coalsig operator use krna hoga ??   
+        }
+        // let msg = `Your score is ${obj.score || 10}`;
+        let msg = `Your score is ${obj.score ?? 10}`;//ab ye sirf nulish value jab aayego tab fllback value dega nhi toh origial value dega
+
+        console.log(msg)
+
+
+*/
+/*
+        //console me check kare per
+        0 ?? 10
+        0
+        false ?? 10
+        false
+        undefined ?? 10
+        10
+        null ?? 10
+        10
+        */
+    </script>
+
+</body>
+
+</html>

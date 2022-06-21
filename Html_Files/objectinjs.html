@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object tutorial in js</title>
+</head>
+
+<body>
+    <h1>Object tutorial in js</h1>
+    <script>
+        /*
+        const employee ={
+            name: 'sarvesh',
+            post: 'software devloper',
+            age: 20,
+            salarry:700000,
+
+        }
+//  */
+        //                 let user = new Object(); //object cunstructor syntax
+        //                 let user1 = {};//object literal syntax brackests me decleartion
+
+
+        //                 //Literals and properties in js
+        //                 let user3 = {
+        //                             name:'john',
+        //                             age:30
+
+        //                 };
+        //                 console.log(user3.name)
+        //                 console.log(user3.age)
+        //                 user3.area = 'Hno524'//ab ye key value pairs me add hoga
+        //                 //use delete.objectname.key press enter object get deleted
+        //                 user3['likes birds'] = true;
+
+
+
+
+        //ek program jouser se input leke kisi uer ka dataa use dikhaye
+        /*
+                        const UserData = {
+                            name:'sarvesh',
+                            age : 20,
+                            area: 524,
+                            number:8568763535,
+        
+        
+                        }
+                         let key = prompt("Enter the key name you want to now about employee");
+                          console.log(UserData[key]);
+        
+        */
+        /*
+                          let fruit = prompt("enter fruit name to know price");
+                          let bag ={
+                              [fruit]:5,
+                          }
+                          console.log(bag.fruit)
+                          */
+        /*
+        
+                function makeuser(name, salary, age) {
+                    return {
+                        name,
+                        salary,
+                        age,
+                    }
+        
+                }
+                let newuser = makeuser('sarvesh', 20, 46000000);
+                console.log(newuser);
+                let user = {
+                        name:'ram',
+                        age :20,
+                        bgroup:'o-'
+                }
+                    console.log('name' in user)
+                    console.log('ravn' in user)
+                    */
+        /*
+                    let user = {
+                        name:'ram',
+                        age :20,
+                        bgroup:'o-'
+                }
+                 for(let key in user){
+                     console.log(key)
+                     console.log(user[key])
+                 }
+        
+                 //
+                 let codes = {
+                     '41' :'america',
+                     '56': 'romania',
+                     '52':'lanka'
+                 }
+                 for(let code in codes){
+                     console.log(codes[code])
+                     console.log([code])
+                 }
+                 
+        
+        
+                 console.log(Math.trunc(number('49.9'))); 
+                 
+                 
+        */
+        /*
+        //program to take input float value and change it into a  integer
+                 let floatValue= prompt("Enter the float value and convert it into an integer");
+        
+                 let MakeitInt=Math.trunc(floatValue)
+                 console.log(MakeitInt);
+                 */
+
+        // let user = {};
+        // user.name = 'john';//user me name naam ki key aur john name ki property add karenge
+        // user.surname = 'smith';//user me surname ko smith asign kar denge
+        // user.name = 'pete';//name me john hta kr pete likh dega
+        // delete user.name;//delete kar dega name ko user me se
+
+
+        //console.log(typeof user); this is use to chek the type of user
+
+
+
+
+        //program 2nd write the function isEmpty(obj)  which returns true if the object has no propeties false otherwise
+
+        /*
+        let employee={
+            name:'sarvesh is a good boy',
+            age: 20,
+            number:0808988,
+            bgroup:'o+'
+        }
+        console.log(employee);
+        employee.name2 = 'sarvesh2';
+        employee.name = 'Ram'
+        employee.age = 22;
+        
+      
+
+        let names=[45,24,4,6,'sarvesh','harry','holi']
+
+        console.log(names)
+        console.log(names.length)
+        let order = names.sort()
+        console.log(order)
+        
+        
+        let names1 = new Array(45,24,4,6,"sarvesh","sharma","ayodhya");
+        console.log(names1);
+       let names2=names1.push('this is pushed text');
+       console.log(names1);
+       let name4= names1.sort();
+       console.log(name4)
+
+
+       let name5 = new Array(23);
+       console.log(name5);
+
+
+
+       let naam = "rahul";
+       let naam2 = "pahul";
+       function greet() {
+           console.log(naam,'is a good boyr');
+           
+           
+       }
+greet();
+
+
+
+           let name6 = 'mohit';
+           let greettext='is a good boy';
+
+           function namaste (name6, greettext)  
+           {
+              console.log( name6 +' aur namaste '+  greettext) ;
+           }
+           namaste(name6,greettext);
+       
+
+           function sum(a,b,c) {
+               let d = a+b+c;
+               return d;
+               
+           }
+let add= sum(87,78,98);
+console.log(add);
+*/
+
+        let friends = ['raju', 'shyam', 'anu', 'kajal']
+
+        for (let index = 0; index < friends.length; index++) {
+            const element = friends[index];
+            // console.log('hello friend'+'name'+friends[index])   
+            console.log(element);
+
+
+
+        }
+
+
+        let friends1 = ['raju', 'shyam', 'anu', 'kajal'];
+        friends1.forEach(element => {
+            console.log('hello friend' + element + 'is using mdern js');
+
+        });
+
+        let friends2 = ['raju', 'shyam', 'anu', 'kajal'];
+
+        for (const element of friends2) {
+            console.log(`Hello friends` + element + 'using modern js')
+
+
+        }
+
+        let employee = {
+            name: 'sarvesh is a good boy',
+            age: 20,
+            number: 0808988,
+            bgroup: 'o+'
+        }
+        //use this loop to itterate objects in js
+      
+
+    </script>
+</body>
+
+</html>

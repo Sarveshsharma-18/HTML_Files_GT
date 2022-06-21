@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array1</title>
+</head>
+
+<body>
+    <h1>Array tutorial</h1>
+    <script>
+        let arry = [10, 20, 30, 40, 50];
+        let sum = 0;
+        document.write(arry)//numbers print ho gye
+        //if i want only one index
+        document.write("<br>", arry[3])//40
+        //use for loop and align numbers in a vertical line
+        document.write("<ul>")
+        for (let a = 0; a <= 4; a++) {
+            document.write("<li>" + arry[a], "<br> </li>")
+            sum = sum + arry[a]
+        }
+        document.write("</ul>")
+        document.write("total sum is " + sum)
+
+        //using different data types
+        let arry2 = ["sarvesh", 10, "hello", true, null, undefined]
+        document.write("<br>", arry2[3])//40
+
+        document.write("<ul>")
+        for (let a = 0; a <= 5; a++) {
+            document.write("<li>" + arry2[a], "<br> </li>")
+            sum = sum + arry[a]
+        }
+        document.write("</ul>")
+    </script>
+</body>
+
+</html>

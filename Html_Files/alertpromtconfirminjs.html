@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        alert promt and confirm in js
+    </title>
+</head>
+<body>
+    <h1>This is turorial for  aleart prompt and confirmk function in js</h1>
+    <script>
+        /*
+        // this is a aleart massages  you cann see a popup
+        alert("This is a alert massage ")
+        alert("your plan has expired within two days")
+
+*/
+/*
+        //suppose user se input lena hai tab aap ise use karenge
+        let name= prompt("Enter your Name", "guest")
+        console.log(name);
+        //console me automatic value print ho jayegi jo  ki assign hogi name ko
+        */
+
+
+        //suppose hme ek double confirmation chahiye user se jab wo koi post delete kare
+
+        let deletepost = confirm("do you really want to delete this post")
+        if (deletepost) {
+            console.log("Your post has been deleated")
+            
+            
+        }
+        else{
+            console.log("your post is safe")
+        }
+
+
+        //program to check user age to give permission in a club
+        let checkage = prompt("Enter your age", "Atithi") 
+        if (checkage>18) {
+            console.log("You are welcome to the club")
+            
+        }
+        else{
+            console.log("You are not eligable wait for mature")
+        }
+    </script>
+    
+</body>
+</html>

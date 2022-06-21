@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes Method of primitives</title>
+</head>
+<body>
+    <h1>
+        Method of primitives in data types
+    </h1>
+    <script>
+        let john ={
+     name:'john',
+     age:30,
+     sayhi:function() {
+         console.log('hi buddy')
+     }
+ }
+ console.log(john)
+ john.sayhi() 
+
+
+ //method t change a string to uppercase
+ let str ="this is changed by Uppercase method";
+  console.log(str.toUpperCase())
+  console.log(str.toLocaleUpperCase())//same output local and without local ka bhi
+
+  //changed to lowercase
+
+  console.log(str.toLowerCase());
+   
+  //use of toFixed(n) rounds the given number
+  let n = 1.233434;
+  console.log(n.toFixed(2)) //output: 1.23
+  console.log(n.toFixed())   //1
+
+
+  //use of type of method
+  console.log(typeof 0)  //output: number
+  console.log(typeof new Number(0));//object 
+
+  //object are always truthy in if 
+  let zero = new Number(0);
+  if (zero){
+    console.log('zero is truthy');
+  }//zeroo is truthy
+  
+
+  //string/Number/Boolean without new is totally same and useful
+
+  let num = Number('123')
+console.log(typeof num)//number
+
+
+
+
+  
+
+    </script>
+</body>
+</html> 

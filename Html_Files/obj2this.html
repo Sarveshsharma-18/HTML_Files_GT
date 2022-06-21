@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This i object</title>
+</head>
+<body>
+    <h1>Simple si html</h1>
+    <script>
+        /*
+        function makeuser() {
+            return{
+                name:'sarvesh',
+           
+            ref(){
+                return this;
+            }
+        };
+    }
+
+    let user = makeuser();
+    document.write(user.ref().name);
+    */
+/*
+    //creating an calculator
+
+
+         let a = +prompt("Enter first value")
+         let b = +prompt("Enter Second value")
+
+         function sum(a,b) {
+        let d = a+b;
+        return d;
+        
+    }
+
+         function mul(a,b) {
+                    return a*b;
+         };
+
+
+
+         let calculator = sum(a,b);
+         alert(`aum of ${a} + ${b} is =`+ " "+calculator);
+
+
+         let  calculator1 = mul(a,b);
+          alert(`multiplyequal to ${a} * ${b} is `+" "+ calculator1);
+          */
+
+          /*
+          //calculator using this
+
+          let calculator ={
+              sum(){
+                  return this.a + this.b;
+
+              },
+              mul(){
+                  return this.a * this.b
+              },
+              read(){
+                  this.a =+prompt('a?', 0);
+                  this.b = +prompt('b?',0);
+              }
+
+          };
+          calculator.read();
+          alert(calculator.sum());
+          alert(calculator.mul());
+          */
+
+/*
+          //ladeer in js
+
+          let ladder = {
+              step:0,
+              up(){
+                  this.step++;
+                  return this;
+
+              },
+              down(){
+                  this.step--;
+                  return this;
+              },
+              showstep(){
+                alert(this.step);
+                return this;
+              }, 
+              
+              
+                
+              
+          };
+          ladder.up().down().showstep().down();
+          
+*/
+/*
+
+// new kewor in js
+
+
+            function User(name){
+                this.name = 'name';
+                this.isAdmin = false;
+            }
+ let user = new User('jack');
+ alert (user.name)
+ alert (user.isAdmin)
+*/
+
+// new calculator  uing constructor function    
+function Calculator() {
+    this.read() ;{
+        this.a =+prompt("Enter the value of a");
+        this.b =+prompt("Enter the value of b");
+
+    };
+    this.sum = function () {
+        return this.a + this.b;
+
+        
+    };
+    this.mul = function(){
+        return this.a * this.b;
+    };
+}
+
+    let calculator = new Calculator();
+    calculator.read();
+    alert('sum=' + calculator.sum());
+    alert('mul='+ calculator.mul());
+    </script>
+</body>
+</html>

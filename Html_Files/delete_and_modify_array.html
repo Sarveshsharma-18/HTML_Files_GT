@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete and modify array in js</title>
+</head>
+
+<body>
+    <h2>delete and modify an array</h2>
+
+    <script>
+        /*
+    
+            let a = ['name', 'age', 'city', 'number']
+            document.write(a); "<br>"
+            a[0] = 'sarvesh';
+            a[2] = 'ayodhya';
+            delete a[3];
+    
+            document.write(a);
+            document.write(a[3]);
+    */
+
+        /*            //sort(methid)
+                let b = ['ram', 'aman', 'salman', 'rajiv', 'luckey'];
+                let c = [43, 43, 435, 656, 5665, 24, 22, 5, 54, 2, 34, 56]
+                c.sort()
+                console.log(b)
+                b.sort();
+                console.log(b)
+                console.log(c);
+        */
+        /*       
+                //reverse an array
+                let d = ['ram', 'aman', 'salman', 'rajiv', 'luckey'];
+                let e = [43, 43, 435, 656, 5665, 24, 22, 5, 54, 2, 34, 56];
+                d.reverse();
+                e.reverse();
+                console.log(d);
+                console.log(e
+                );
+        
+        
+                //pop() and push() method
+                let f = ['ram', 'aman', 'salman', 'rajiv', 'luckey'];
+                console.log(f);
+                f.pop();//luckey is deleated
+                console.log(f);
+        
+                f.push('pushed value');
+                console.log(f);
+                //shift and unshift
+        
+                let i = ['ram', 'aman', 'salman', 'rajiv', 'luckey'];
+                console.log(i);
+                i.shift();
+                console.log(i);
+                i.unshift('unsshift value')
+                console.log(i);
+        
+        
+        
+                //concat() and join()
+                //ading multiple elements
+                let h = ['ram', 'aman', 'salman'];
+                console.log(h);
+                let j = h.concat('Added1', 'Added2', 'Added3');
+                console.log(j);
+                //concat two arrays
+                let ary1 = ['ram', 'aman', 'salman'];
+                let ary2 = ['concat1', 'concat2', 'concat3', 878, 897];
+                let ary3 = ['one ', 'two', 'three', 'four'];
+                let concatarry = ary1.concat(ary2); "<br>"
+                //adding three arays
+                let array3join = ary1.concat(ary2, ary3);
+        
+                console.log(concatarry);
+                console.log(array3join);
+        
+        
+                //join()
+               let ar1 =['dhaka', 'taka', 'hashina','ravina'];
+                let ar2 =ar1.join('?/');
+                console.log(ar2);
+         
+        
+                //slice() and splice()
+                let slic = ['rama ', 'hama ','shyama'];
+        
+                let cut= slic.slice(0,2)
+                let cut1= slic.slice(0)
+                let cut2= slic.slice(-1 )
+                console.log(cut);
+        
+        
+                //splice(beech me koi value add and delete krna)
+         let        z = ['ram', 'shyam','namm']
+        
+                        console.log(z);
+                    z.splice(1,0,'raju','kaju','baju')
+                    
+                    console.log(z);
+                    z.splice(1,1,'raju','kaju','baju')
+                    console.log(z);
+                    z.splice(-1,0,'raju','kaju','baju')
+                    console.log(z);
+        
+        */
+
+/*
+        //indexof and last indexof method
+
+        let a = ['aarvesh', 34, 'mahatma fgandhi', 'soniagandi', 'aarvesh'];
+        console.log(a.indexOf('mahatma fgandhi'));//2
+        console.log(a.indexOf('aarvesh', 2));//4
+        console.log(a.indexOf('aarvesh'));//4
+
+        console.log(a.lastIndexOf('soniagandi'));//3
+        console.log(a.lastIndexOf('aarvesh', 2));//0 
+
+        //includes() function
+        let b = ['sabnam', 'sona', 'ravina', 'kavita']
+        let c = b.includes('sabnam')
+        console.log(c);//true means hai
+        c = b.includes('raja')
+        console.log(c);//false 
+
+*/
+
+/*
+            //some() and every(function)
+
+            // let a = ['sabnam', 'sona', 'ravina', 'kavita']
+            let ages = [34,545,53,32,45,7,0,2,42,35];
+            let b= ages.some(checkage);
+            function checkage(ages) {
+                return ages>=18;
+                
+            }
+            console.log(b)
+
+
+            //every()
+             
+                let ages2 = [33,44,55,63, 56,35,33];
+                let check = ages2.every(check18);
+
+                function check18(ages2) {
+                    return ages2>=18;
+                    
+                }
+                console.log(check);//true
+*/
+/*
+                //using filter - fetch content according to condition
+
+                let ages = [23,34,5,35,4,53,23,56,23,2,45,636,66,3] ;
+                 let b = ages.filter(fetchbigger);
+                 
+                 function fetchbigger(age) {
+                    return age>18;
+                    
+                 }
+                    console.log(b);//array is ready
+                        //[23, 34, 35, 53, 23, 56, 23, 45, 636, 66]
+*/
+
+                        //areyname.tostring()
+                        let ag = [10,20,45,334,4,2,3,434,54,65];
+                       let b= ag.toString();
+                        console.log(b);
+                        console.log(typeof(b));
+
+
+                        //valueof()
+                        let ag1 = [10,20,45,334,4,2,3,434,54,65];
+                        console.log(ag1.valueOf())//
+                        console.log(ag1);//both are same 
+
+                        //fill()
+                        let fi = [23,43,54,'sarvesh','himalya',Boolean];
+                        fi.fill('ram');
+                        console.log(fi);
+
+                        //forEach()
+                        let arry =[23,43,54,'sarvesh','himalya'];
+
+                        arry.forEach(loop);
+                        function loop(value, index) {
+                            document.write(index +":"+value + "<br>");
+                            
+                            
+                        }
+
+    </script>
+</body>
+
+</html>

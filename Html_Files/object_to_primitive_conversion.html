@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object to primitive conversion</title>
+</head>
+<body>
+    <h1>Object to primitive conversion</h1>
+    <script>
+        //output
+        // alert(obj)
+        // anotherObj[obj] = 123;
+        let user ={
+            name:'sarvesh',
+            money:500,
+
+            [Symbol.toPrimitive](hint){
+                alert(`hint: ${hint}`);
+                return hint == 'string' ? `{name: '${this.name}'}`   :this.money;
+            }
+
+
+        };
+
+        alert(user);
+        alert(+user);
+        alert(user + 500);
+        
+    </script>
+</body>
+</html>

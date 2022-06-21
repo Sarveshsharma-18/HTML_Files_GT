@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number method.html</title>
+</head>
+<body>
+    <h1>Number method</h1>
+    <script>
+
+        //Number
+        // let a = "999";    
+        // let a = true;  //1
+        let a = '99 44'; //nan  
+        let num = Number(a);
+        console.log(num);
+
+
+
+        //paeseInt
+
+
+        // let b = '88 88 9 9';     //88
+        // let b = '10.089';     //10
+        // let b = '50 years  ';     //50
+        let b = ' years 50  ';     //Nan
+        let c = parseInt(b)
+        console.log(c)
+
+        // parseFloat
+
+        // let d = "10.33";  //10.33
+        let d = "10";  //10
+        let num2 = parseFloat(d)
+        console.log(num2)
+
+
+        //Number.isFinite()
+        // let e = 1.55;//true
+        // let e = '1.55';//false
+        let e = Infinity;//false
+        let num3 = Number.isFinite(e)
+        console.log(num3)
+
+
+        //Number.isInteger
+
+        // let f = '345';//false
+        // let f = 345;//true
+        // let f = -345;//true
+        let f = 10.50 - 5;//false
+        // let f = 10 - 345;//true
+        let num4 = Number.isInteger(f)
+        console.log(num4);
+
+
+        //varname.toFixed(x)
+
+        // let i = 5.242109;  //5.242
+        let i = 22.3334;  //5.242
+
+        let num5 =i.toFixed(3)
+        console.log(num5);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object keys values and enteries
+
+    </title>
+</head>
+
+<body>
+    <h1>Object keys values and enteries</h1>
+    <script>
+        const a = {
+            "name": "Sarvesh",
+            "dept": "IT",
+            "state": "UP",
+            "country": "IN"
+        }
+        //for keys
+        Object.keys(a).forEach((i) => {
+           console.log(i)
+        })
+
+        // for values method1
+        Object.keys(a).forEach((j) => {
+            console.log(a[j])
+        })
+        //method2
+        Object.values(a).forEach((k) =>{
+            console.log(k)
+        })
+
+        //enteries it create every key value pairs to an seperate array
+        let enteries = Object.entries(a)
+        console.log(enteries)
+
+        // if we want to print singal array using its array index
+        let enteries1 = Object.entries(a);
+        console.log(enteries[2])
+
+
+        //print only value of a array using its index
+        let enteries2 = Object.entries(a);
+        console.log(enteries[2][0])
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol in js</title>
+</head>
+<body>
+    <h1> symbol in js</h1>
+    <script>
+        /*
+        // symbol tytorial
+        const sym1 = Symbol('ny identiier')
+        const sym2 = Symbol('ny identiier')
+        console.log(sym1)
+        console.log(sym2)
+        console.log(sym2 === sym1)//false3 aaega kyuiki dono unique hai
+*/
+        //ahr mai string banata bina symol ke tab true aata
+        const sym1 = 'ny identiier'
+        const sym2 = 'ny identiier'
+        
+        console.log(sym1)
+        console.log(sym2)
+        console.log(sym2 === sym1) //ab answer true hai 
+        console.log(null === null)
+        console.log(undefined === undefined)
+        //symbol lagane per unique bante hai yhi khasiyat hai symbol ki
+        //symbol ue hote hai unique keys banane ke liye  ya aisa primitive generate karne ke liye jo unique ho
+
+        const k1 = Symbol('identifier for k1');
+        const k2 = Symbol('identifier for k2');
+
+
+        myobj = {
+
+        };
+        myobj[k1] = 'sarvesh';
+        myobj[k2] = 'rahul';
+        myobj['name'] = 'good boy'//good boy add karna onject me ''lagake dono tarf
+        myobj[4] = 'good int'
+
+        console.log(myobj)
+        console.log(myobj[k1])
+        console.log(myobj[k2])
+        console.log(myobj.k2)//ye nhi istemal  karenege value undefined aayegi .nhi lga sakte
+        
+            for(key in myobj){
+                console.log(key, myobj[key])
+            }
+ 
+
+            console.log(JSON.stringify(myobj));
+
+
+    </script>
+</body>
+</html>

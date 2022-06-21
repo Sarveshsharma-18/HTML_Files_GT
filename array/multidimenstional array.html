@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multisimentional array</title>
+</head>
+
+<body>
+    <h1>multidimentonal array</h1>
+    <script>
+        let arry = [
+            ['sarvesh', 18, 'male', 'bca'],
+            ['rajiv', 22, 'bangali', 'MBA'],
+            ['thapa', 23, 'nepal', 'm.com'],
+            ['thapa', 23, 'nepal', 'm.com',688,797],
+            ['thapa', 23, 'nepal', 'm.com']
+        ]
+        //  console.log(arry);
+        //  console.log(arry[2]);
+        //  console.log(arry[2][2]);
+        //  document.write(arry[2])//thapa row
+        //  document.write(arry[2][2])//nepa
+        //print all index uisng for loop
+
+
+        // for (let a = 0; a<3; a++){
+        //     document.write(arry[a]+"<br>")
+        // }
+        //ab comma hatana hai se nested loop aur space bhi lana
+        for (let a = 0; a <arry.length; a++) {
+            // for (let b = 0; b <arry[a].length; b++) {
+            for (let b = 0; b < 4; b++) {
+                document.write(arry[a][b] + " ")
+            }
+            document.write("<br>")
+        }
+
+
+        //poore data ko table ke form mr drkhana
+        document.write("<table border = '1px solidred' >")
+        // document.write("<table border = '1px' cellspacing = '0' >")
+        for (let a = 0; a <arry.length; a++) {
+            document.write('<tr>')
+            for (let b = 0; b < 4; b++) {
+                document.write("<td>"+arry[a][b] + "</td> ")
+            }
+            document.write("<br>")
+            document.write('</tr>')
+        }
+document.write("</table>")
+    </script>
+</body>
+
+</html>

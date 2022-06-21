@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna college object tutorial</title>
+</head>
+
+<body>
+    <h1>Apna college tutorial</h1>
+    <script>
+        /*
+        let lecture = 1;
+        let section = 3;
+        let title ='javascript'
+
+        //it take more time insted off that we are using  object
+
+        const course ={
+            lecture:1,
+            section:3,
+            title:'javascript',
+            notes:{
+                intro: ' Welcome to the javascript course'
+            },
+            enroll(){                                               //jab hum function ko obj me add karte hai tab hum use method kahte hai
+                console.log('You are suucessfully enrolled')
+            },
+        }
+
+
+            //when we call an function in object we call using . sign
+        // function enroll(){
+        //     console.log('You are suucessfully enrolled')
+        // }
+
+                course.enroll()//ye enroll method ko call karega aur uska content print karega
+                console.log(course)//ye pura object print karega
+                console.log(course.title);//ab ye title property access kar ke dega mujhe aur uski value print karega
+
+
+                        //ab hum bahr se property add karenge
+                        course.price = 999;//ab object me add hogya
+
+
+
+
+    */
+
+        /*
+            //creating Object using factory function 
+               
+                  function CreateCourse() {
+        
+                    // const course ={ iski bhi jarorat nhi hai  
+                        //ab  hamara function  return karega poora block code ka
+                        return{
+                    lecture:1,
+                    section:3,
+                    title:'javascript',
+                    notes:{
+                        intro: ' Welcome to the javascript course'
+                    },
+                    enroll(){                                               //jab hum function ko obj me add karte hai tab hum use method kahte hai
+                        console.log('You are suucessfully enrolled')
+                    },
+        
+                }   
+                // return course;  iski jaroorat nhi hai uper return likh diya
+                  }
+        
+                  const course = CreateCourse();
+                  course.enroll()//same work kar rha hai result: you are suusccesfull enrolled
+        */
+
+
+
+        /*
+                    //ab humne jo property  me value li hai wo  predefined hai  toh usko hatane ke liye hum argument pass karenge
+        
+                        function CreateCourse(title) {
+                            return{
+                                title: title,
+                                enroll(){
+                                    console.log('you are enrolled successfully')
+                                }
+                            }
+                            
+                        }
+                        // const course = CreateCourse();//isko comment out kiya hai 
+                        const course = CreateCourse('javascript');
+                        course.enroll();
+                        console.log(course.title)//abhi iski value undefind aaygi kyuki hamne kuch pass nhi kiya hai
+                        
+        */
+
+        /*
+        //constructor function in javascript
+
+        function Course(title) {
+            this.title = title,  //this keyword point karta hai ise function ko 
+                this.enroll = function () {         //colon ki jagah = use karte hai
+                    console.log('You enrolled succsessfully');
+                }
+
+        }
+        //how to use construtor function 
+        // isme new keyword use karte hai new keword pahle ke objecrt bnaega empty aur phir uske badd this keword object ko refrence
+        //dega point kareega phir new keyword ise this ko return karega aur lekar course variabl ko de dega
+        const course = new Course('javascript')
+        //how to use 
+        course.enroll();
+
+
+
+        //delete kyword: use to delete any object property supose we are going to delete title
+
+        delete course.title;//result:course me title delete ho gya hai
+        console.log(course)
+                
+        
+        
+        //Adding New function in Constructor function
+
+
+        course.checkEnrollment =function(){
+            console.log('30 users enrolled');
+        }
+
+        console.log(course)
+ */
+
+/*
+            //know the constructor of object sing constructorr method
+            function Course(title) {
+            this.title = title,    
+                this.enroll = function () {         
+                    console.log('You enrolled succsessfully');
+                }
+
+        }
+
+            const course = new Course('javascript')
+            //ab hum dekhenge ki ye jo course object hai wo bna kis function kis constructor se bna hai
+
+
+            console.log(course.constructor)
+
+
+
+            //ab hum factory function me kon s constructor hai check karenge
+            
+            function CreateCourse(title) {
+                            return{
+                                title: title,
+                                enroll(){
+                                    console.log('you are enrolled successfully')
+                                }
+                            }
+                            
+                        }
+                        const newCourse = CreateCourse('javascript')
+                console.log(newCourse.constructor)// output me function aur native code dega
+
+*/
+/*
+
+                //ab jo function aaya hai hum usese ek constructor function banyege aur phir usese ek object banayege
+
+
+                const course_1 = new Function('title',`{
+            this.title = title,    
+                this.enroll = function () {                         
+                    console.log('You enrolled succsessfully');              
+                }
+
+        }
+`
+
+
+)
+//AB HUM ISE USE KARENGE 
+                        const course_2 = new course_1 ('javascript');
+                        course_2.enroll();
+                        //OUTPUT YOU    are enrolled
+
+
+
+*/
+/*
+                        // defference between pre,mitive data type and refrence data type
+
+                //primitive data type 
+                let number = 10;
+                //pass by value
+                let number_2 = number;//number ki value assign hui number_2 ko 10
+                number = 15;
+                console.log(number);
+                console.log(number_2);
+                
+                //refrence data type
+                    let obj ={number:10};
+                    let obj2 = obj;
+                    console.log(obj)
+                    console.log(obj2)
+    */ 
+   
+    /*
+                    // object ke andar pass by value karna  Method 1
+
+                    const course =  {
+                        title:'javascript',
+                        enroll(){
+                            console.log('you are enrolled succsesfully')
+                        }
+                    }
+
+                    //ab hum isko clone karenge course_1 naya object banayenge uspe ...spread operatr use karenge
+                    const course_1 = {...course} 
+                    //... line se object ki sari property laa dega
+                    console.log(course_1)
+                    course_1.title = 'c++'
+                    */
+                
+/*                   
+                   
+                    //method 2 using Object .assign method se clone karenge
+                    //2 things target and source
+                   
+                    const course =  {
+                        title:'javascript',
+                        enroll(){
+                            console.log('you are enrolled succsesfully')
+                        }
+                    }
+
+                    const course_1 = Object.assign({},course)
+                    console.log(course_1);
+                    course_1.title = 'c++';
+                    console.log(course_1)
+
+                */
+                /*    
+                //method3 for in loop se copy karan
+
+                    const course =  {
+                        title:'javascript',
+                        enroll(){
+                            console.log('you are enrolled succsesfully')
+                        }
+                    }
+                    for (let key in course){
+                        console.log(key,course[key])
+                    }
+                    //output sab print hoga consoleme
+*/
+ 
+                    //for of loop use karke copy karna 
+
+                    
+                    const course =  {
+                        title:'javascript',
+                        enroll(){
+                            console.log('you are enrolled succsesfully')
+                        }
+                    }
+                    const course_1 = {}; 
+                    for (const key of Object.keys(course)) {
+                        // console.log(key,course[key])
+                        course_1[key] = course[key]
+                    }
+                    console.log(course_1)
+
+
+                    //all object topics coverd
+                  a=  {
+  "name": "Sarvesh",
+  "dept": "IT",
+  "state": "UP",
+  "country": "IN"
+}
+
+
+            enroll(title)
+
+
+
+                    
+
+    </script>
+</body>
+
+</html>

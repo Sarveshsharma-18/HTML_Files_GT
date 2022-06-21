@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional chaning ??</title>
+</head>
+<body>
+    <h1>Optional chaning tutorial</h1>
+    <script>
+        //use object ki nesed propety accsess karna withod errors unexpected errors
+        //syntax obj?.a?.b
+        //purana tarika  obj.a.b ab nhi use karte
+/*
+        let obj ={
+            person:{
+                // name: 'sarvesh'
+            }
+        }
+        console.log(obj.person.name)//sarvesh mila
+        //ab uper comment out karne per name ko
+        console.log(obj.person.name)//answer is undefined kyuki wo hai nhi wha per
+
+*/
+
+        //problem: jab deep nesting karni pdti hai tab problem hoti hai pta nhi wo available hai ki nahi
+        //ab obj me personbhi gayab karne per
+        let obj = {};
+        // console.log(obj.person.name)//ab yha per error aayrga iska solution kya hai 
+        //solution1: hum checks ka use kar sakte hai code me jo unexpected error se bachaega hme
+        console.log(obj.person && obj.person.name)//output is undefined
+
+
+
+                //method1
+        //optional chaning use: aap optional chaning ki help se  object ki nested properties ko access kar sakte hai bina uski 
+            //ye check kiye ki wo properties exist krti bhi hai ya nhi aur koi error bhi nhi aayega
+            console.log(obj?.person?.name)//answer is undefined matlab nhihai
+
+
+            //method2
+            //we can set properties dynamically
+            
+        let obj1 ={
+            person:{
+                name: 'sarvesh'
+            }
+        }
+
+        let x='name';
+        let y = 'person';
+        console.log(obj1?.[y]?.[x])//answer is sarvesh we can access the name  properties
+
+
+        //method3
+        //ab hum  object me ek array and ek function add karenge aur tabu use karenge
+
+        let obj2 ={
+            person:{
+                name:'sarvesh',
+            },
+            arr:[1,2,3,4,5],
+            func:()=>{
+                console.log('yahoo function called')
+
+            }
+        }
+
+        //optional chaning ki help se arry me kisi index ko access kar sakte hai
+
+        console.log(obj2?.arr?.[2])//answer is 3 access ho gya
+
+        //function ko access karna
+        console.log(obj2?.func?.())//now yahoo function called print ho gya
+
+
+
+        //Limitatuion in optipnal chaining first
+
+        //ye non existing root object per kamm nhi karta  matlab agar jo object nhi hai use call karoge toh error dega
+        // console.log(obj5?.person?.name);// error obj5 not defined
+        //agar hum check lga kar likh toh aise likhna padega
+        console.log(typeof obj5 !== 'undefined' && obj5?.person?.name);
+
+
+        //limitation 2nd
+
+    //if you want to modify a property ehich does't exist then it throws error
+
+    obj2.person?.age =22; //kahega invalid left hand side in assignment
+
+    //browser support
+     
+    </script>
+</body>
+</html>
